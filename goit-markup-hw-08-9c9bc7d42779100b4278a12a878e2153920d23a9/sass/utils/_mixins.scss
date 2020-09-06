@@ -1,0 +1,26 @@
+@mixin centeredFlex($display: flex, $align-items: center) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: center;
+}
+
+@mixin header-icons($width: 16px, $height: 11.2px) {
+  width: $width;
+  height: $height;
+  margin-right: 11px;
+}
+@mixin transition($parametr) {
+  transition: $parametr 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@mixin form-icons($width, $height: 12px) {
+  width: $width;
+  height: $height;
+}
+@mixin bordered($width, $color) {
+  border: $width solid $color;
+}
+@mixin logo($line-height: 1.17) {
+  font-family: Raleway;
+  font-weight: 700;
+  line-height: $line-height;
+}

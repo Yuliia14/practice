@@ -1,0 +1,180 @@
+.projects {
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 93px;
+    margin-bottom: 94px;
+  }
+}
+.projects h1 {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+.projects-list {
+  @include centeredFlex(inline-flex);
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-bottom: -15px;
+
+  @media screen and (min-width: $tablet) {
+    @include centeredFlex();
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $desktop) {
+      margin: auto;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  & > li {
+    margin-top: 15px;
+
+    @media screen and (min-width: $tablet) {
+      margin: 0;
+    }
+  }
+
+  & > li:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+.project-examples {
+  margin-top: 40px;
+
+  @media screen and (min-width: $tablet) {
+    @include centeredFlex();
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
+.projects-examples-item {
+  padding-bottom: 20px;
+  width: 100%;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 3 * 30px) / 3);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0px;
+    }
+  }
+}
+.projects-examples-title {
+  margin: 20px 24px 0px 24px;
+
+  @media screen and (min-width: $tablet) {
+    width: auto;
+    height: auto;
+  }
+}
+
+.portfolio-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $title-color;
+
+  @media screen and (min-width: $tablet) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.project-examples-type {
+  font-size: 16px;
+  line-height: 1.88;
+  color: $text-color;
+  margin: 0px;
+  margin-top: 4px;
+}
+.projects-examples-img {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    @include transition(transform);
+  }
+  &:hover::before {
+    transform: translateY(0);
+  }
+  .projects-examples-item > a:focus &::before {
+    transform: translateY(0);
+  }
+
+  & img {
+    width: 100%;
+  }
+}
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(100%);
+
+  @include transition(transform);
+
+  .projects-examples-img:hover & {
+    transform: translateY(0);
+  }
+  .projects-examples-item > a:focus & {
+    transform: translateY(0);
+  }
+}
+.project-examples-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 77px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: $white-color;
+
+  @media screen and (min-width: $tablet) {
+    margin: 49px 24px;
+    width: auto;
+    height: auto;
+  }
+  @media screen and (min-width: $desktop) {
+    margin: 63px 24px;
+  }
+}

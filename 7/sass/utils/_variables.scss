@@ -1,0 +1,18 @@
+/*--primary-text-color: #757575;
+--title-text-color: #212121;
+--primary-blue-color: #2196f3;
+--logo-studio-color: #000000;
+--primary-white-color: #ffffff;
+--footer-address-color: rgba(255, 255, 255, 0.6);*/
+
+$text-color: #757575;
+$title-color: #212121;
+$blue-color: #2196f3;
+$logo-color: #000000;
+$white-color: #ffffff;
+$footer-address-color: rgba(255, 255, 255, 0.6);
+
+@mixin font($family: Roboto, $letter-spacing: 0.03em) {
+  font-family: $family;
+  letter-spacing: $letter-spacing;
+}

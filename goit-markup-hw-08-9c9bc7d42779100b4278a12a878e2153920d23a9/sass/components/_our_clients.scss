@@ -1,0 +1,73 @@
+.our-clients {
+  @include centeredFlex();
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: -15px;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 50px;
+  }
+
+  & li {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 3 * 30px) / 3);
+      margin: 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 6 * 30px) / 6);
+      margin: 15px;
+    }
+  }
+}
+.clients-box {
+  @include centeredFlex();
+  height: 90px;
+
+  border-radius: 4px;
+  @include bordered(1px, #afb1b8);
+  @include transition(border-color);
+
+  &:hover {
+    border-color: $blue-color;
+  }
+}
+.company-icon {
+  fill: #afb1b8;
+
+  @include transition(fill);
+
+  .clients-box:hover & {
+    fill: $blue-color;
+  }
+  .clients-box:focus & {
+    fill: $blue-color;
+  }
+}
+.our-clients .first {
+  width: 44px;
+  height: 49px;
+}
+.our-clients .second {
+  width: 40px;
+  height: 52px;
+}
+.our-clients .third {
+  width: 41px;
+  height: 43px;
+}
+.our-clients .fourth {
+  width: 80px;
+  height: 42px;
+}
+.our-clients .fifth {
+  width: 59px;
+  height: 47px;
+}
+.our-clients .sixth {
+  width: 88px;
+  height: 45px;
+}

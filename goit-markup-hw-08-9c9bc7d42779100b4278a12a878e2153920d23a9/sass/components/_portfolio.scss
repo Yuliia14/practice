@@ -1,0 +1,21 @@
+.page-filter {
+  padding: 6px 22px;
+  border: transparent;
+  border-radius: 4px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  color: $title-color;
+
+  cursor: pointer;
+  @include transition(color);
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $blue-color;
+  }
+}
